@@ -1,7 +1,9 @@
 using System;
 
-class HelloWord{
-    static void Main(){
+class HelloWord
+{
+    static void Main()
+    {
         Console.Write("Hello world...");
     }
 }
