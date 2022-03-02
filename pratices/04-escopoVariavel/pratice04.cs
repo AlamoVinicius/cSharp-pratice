@@ -6,3 +6,5 @@ class Pratice04 {
         Console.WriteLine(num);
     }
 }
+
+// para executar o código acima é necessário gerar o exe do código, usando clc
