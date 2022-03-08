@@ -124,7 +124,5 @@ class MethodArray
         {
             Console.WriteLine(items);
         }
-
     }
-
 }
