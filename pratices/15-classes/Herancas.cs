@@ -6,23 +6,25 @@ class Vehicles      //Base class
     public int velMax;
     private bool engine_on;
 
-    public void connect_on()
+    public void connect_on(bool engine_on)
     {
-        engine_on = true;
+        this.engine_on = engine_on;
     }
 
-    public void connect_off()
+    /*public void connect_off()
     {
         engine_on = false;
-    }
+    }*/
 
     public string getStateConnectCarr()
     {
         if (engine_on)
         {
-            return  "Motor ligado";
-        } else {
-            return  "Motor desligado";
+            return "Motor ligado";
+        }
+        else
+        {
+            return "Motor desligado";
         }
     }
 }
@@ -31,9 +33,23 @@ class Carr : Vehicles  //class derivada
 {  //sintaxe para classe Carr herdar a classe Vehicles, obs..: mesmo sem ser herdada ja podemos ter acesso aos membros da classe Vehicles pois elas estão definidas como "public".
     public string nome;
     public string cor;
+    public bool turn_on;
     public Carr(string nome, string cor)
     {
-        connect_off();
+        Console.Write("Deseja ligar o carro? [S/N]");
+        string condition = Console.ReadLine().ToUpper()[0].ToString();
+        if (condition == "S")
+        {   
+            turn_on = true;
+            
+        }
+        else
+        {
+            turn_on = false;
+        }
+
+        Console.WriteLine(turn_on);
+        connect_on(turn_on);
         wheels = 4;
         velMax = 250;
         this.nome = nome;
