@@ -73,7 +73,7 @@ class Carr : Vehicles  //class derivada
 class FightCar : Carr
 {
     public int wepons;
-    public FightCar() : base("Tanque de guerra", "Verde camuflado")
+    public FightCar() : base("Tanque de guerra", "Verde camuflado")  //use base para chamar um método da classe derivaa que é necessário passar algum tipo de parâmetro 
     {
         wepons = 100;
         setWheels(8);
