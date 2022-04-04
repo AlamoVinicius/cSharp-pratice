@@ -69,5 +69,33 @@ namespace TectBoxComponents
             Form_checkedListBox checkedListBox = new Form_checkedListBox();
             checkedListBox.ShowDialog();
         }
+
+        private void comboxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            comboBox form_ComboBox = new comboBox();
+            form_ComboBox.ShowDialog();
+        }
+
+        private void datetimePickerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_dateTimePicker form_DateTimePicker = new Form_dateTimePicker();
+            form_DateTimePicker.ShowDialog();
+        }
+
+        private void linkLabel_gitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/alamovinicius");  // sintaxe acesso ao navegador
+        }
+
+        private void linkLabel_calc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc.exe");    //npme do arquivo ou programa dentro do windows
+        }
+
+        private void listBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListBox newform = new FormListBox();
+            newform.ShowDialog();
+        }
     }
 }   

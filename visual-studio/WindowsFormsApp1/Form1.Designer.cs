@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class Main_form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,52 +29,54 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_name = new System.Windows.Forms.Button();
-            this.lb_linkGitHub = new System.Windows.Forms.Label();
-            this.tb_name = new System.Windows.Forms.TextBox();
+            this.btn_text = new System.Windows.Forms.Button();
+            this.lb_text = new System.Windows.Forms.Label();
+            this.Text_box = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btn_name
+            // btn_text
             // 
-            this.btn_name.BackColor = System.Drawing.SystemColors.Info;
-            this.btn_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_name.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_name.Location = new System.Drawing.Point(49, 34);
-            this.btn_name.Name = "btn_name";
-            this.btn_name.Size = new System.Drawing.Size(180, 74);
-            this.btn_name.TabIndex = 0;
-            this.btn_name.Text = "Click on me";
-            this.btn_name.UseVisualStyleBackColor = false;
+            this.btn_text.BackColor = System.Drawing.SystemColors.Info;
+            this.btn_text.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_text.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_text.Location = new System.Drawing.Point(12, 77);
+            this.btn_text.Name = "btn_text";
+            this.btn_text.Size = new System.Drawing.Size(264, 74);
+            this.btn_text.TabIndex = 0;
+            this.btn_text.Text = "Click on me";
+            this.btn_text.UseVisualStyleBackColor = false;
+            this.btn_text.Click += new System.EventHandler(this.Btn_text_Click);
             // 
-            // lb_linkGitHub
+            // lb_text
             // 
-            this.lb_linkGitHub.AutoSize = true;
-            this.lb_linkGitHub.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_linkGitHub.Location = new System.Drawing.Point(12, 9);
-            this.lb_linkGitHub.Name = "lb_linkGitHub";
-            this.lb_linkGitHub.Size = new System.Drawing.Size(268, 22);
-            this.lb_linkGitHub.TabIndex = 1;
-            this.lb_linkGitHub.Text = "https://github.com/AlamoVinicius";
+            this.lb_text.AutoSize = true;
+            this.lb_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_text.Location = new System.Drawing.Point(8, 164);
+            this.lb_text.Name = "lb_text";
+            this.lb_text.Size = new System.Drawing.Size(268, 22);
+            this.lb_text.TabIndex = 1;
+            this.lb_text.Text = "https://github.com/AlamoVinicius";
             // 
-            // tb_name
+            // Text_box
             // 
-            this.tb_name.Location = new System.Drawing.Point(49, 147);
-            this.tb_name.Name = "tb_name";
-            this.tb_name.Size = new System.Drawing.Size(180, 20);
-            this.tb_name.TabIndex = 2;
-            this.tb_name.Text = "name";
+            this.Text_box.Location = new System.Drawing.Point(12, 25);
+            this.Text_box.Multiline = true;
+            this.Text_box.Name = "Text_box";
+            this.Text_box.Size = new System.Drawing.Size(264, 28);
+            this.Text_box.TabIndex = 2;
             // 
-            // Form1
+            // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tb_name);
-            this.Controls.Add(this.lb_linkGitHub);
-            this.Controls.Add(this.btn_name);
+            this.Controls.Add(this.Text_box);
+            this.Controls.Add(this.lb_text);
+            this.Controls.Add(this.btn_text);
             this.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.Name = "Form1";
+            this.Name = "Main_form";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -83,9 +85,9 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        private System.Windows.Forms.Button btn_name;
-        private System.Windows.Forms.Label lb_linkGitHub;
-        private System.Windows.Forms.TextBox tb_name;
+        private System.Windows.Forms.Button btn_text;
+        private System.Windows.Forms.Label lb_text;
+        private System.Windows.Forms.TextBox Text_box;
     }
 }
 

@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListBox.Designer.cs">
+      <DependentUpon>FormListBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_checkBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,18 @@
     <Compile Include="Form_checkedListBox.Designer.cs">
       <DependentUpon>Form_checkedListBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_comboBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_comboBox.Designer.cs">
+      <DependentUpon>Form_comboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_dateTimePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_dateTimePicker.Designer.cs">
+      <DependentUpon>Form_dateTimePicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Vehicles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,11 +93,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListBox.resx">
+      <DependentUpon>FormListBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_checkBox.resx">
       <DependentUpon>Form_checkBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_checkedListBox.resx">
       <DependentUpon>Form_checkedListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_comboBox.resx">
+      <DependentUpon>Form_comboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_dateTimePicker.resx">
+      <DependentUpon>Form_dateTimePicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Vehicles.resx">
       <DependentUpon>Form_Vehicles.cs</DependentUpon>

@@ -40,6 +40,11 @@ namespace TectBoxComponents
             this.componentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkedListboxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datetimePickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkLabel_gitHub = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_calc = new System.Windows.Forms.LinkLabel();
+            this.listBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +134,10 @@ namespace TectBoxComponents
             // 
             this.componentesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkBoxToolStripMenuItem,
-            this.checkedListboxToolStripMenuItem});
+            this.checkedListboxToolStripMenuItem,
+            this.comboxToolStripMenuItem,
+            this.datetimePickerToolStripMenuItem,
+            this.listBoxToolStripMenuItem});
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.componentesToolStripMenuItem.Text = "Componentes";
@@ -148,11 +156,56 @@ namespace TectBoxComponents
             this.checkedListboxToolStripMenuItem.Text = "CheckedListbox";
             this.checkedListboxToolStripMenuItem.Click += new System.EventHandler(this.checkedListboxToolStripMenuItem_Click);
             // 
+            // comboxToolStripMenuItem
+            // 
+            this.comboxToolStripMenuItem.Name = "comboxToolStripMenuItem";
+            this.comboxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comboxToolStripMenuItem.Text = "ComBox";
+            this.comboxToolStripMenuItem.Click += new System.EventHandler(this.comboxToolStripMenuItem_Click);
+            // 
+            // datetimePickerToolStripMenuItem
+            // 
+            this.datetimePickerToolStripMenuItem.Name = "datetimePickerToolStripMenuItem";
+            this.datetimePickerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.datetimePickerToolStripMenuItem.Text = "Datetime picker";
+            this.datetimePickerToolStripMenuItem.Click += new System.EventHandler(this.datetimePickerToolStripMenuItem_Click);
+            // 
+            // linkLabel_gitHub
+            // 
+            this.linkLabel_gitHub.AutoSize = true;
+            this.linkLabel_gitHub.Location = new System.Drawing.Point(13, 453);
+            this.linkLabel_gitHub.Name = "linkLabel_gitHub";
+            this.linkLabel_gitHub.Size = new System.Drawing.Size(61, 13);
+            this.linkLabel_gitHub.TabIndex = 8;
+            this.linkLabel_gitHub.TabStop = true;
+            this.linkLabel_gitHub.Text = "meu Github";
+            this.linkLabel_gitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_gitHub_LinkClicked);
+            // 
+            // linkLabel_calc
+            // 
+            this.linkLabel_calc.AutoSize = true;
+            this.linkLabel_calc.Location = new System.Drawing.Point(81, 453);
+            this.linkLabel_calc.Name = "linkLabel_calc";
+            this.linkLabel_calc.Size = new System.Drawing.Size(63, 13);
+            this.linkLabel_calc.TabIndex = 9;
+            this.linkLabel_calc.TabStop = true;
+            this.linkLabel_calc.Text = "Calculadora";
+            this.linkLabel_calc.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_calc_LinkClicked);
+            // 
+            // listBoxToolStripMenuItem
+            // 
+            this.listBoxToolStripMenuItem.Name = "listBoxToolStripMenuItem";
+            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listBoxToolStripMenuItem.Text = "List box";
+            this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.listBoxToolStripMenuItem_Click);
+            // 
             // Form_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 484);
+            this.Controls.Add(this.linkLabel_calc);
+            this.Controls.Add(this.linkLabel_gitHub);
             this.Controls.Add(this.Btn_showvalue);
             this.Controls.Add(this.btn_show_vehicles);
             this.Controls.Add(this.btn_clear);
@@ -186,6 +239,11 @@ namespace TectBoxComponents
         private System.Windows.Forms.ToolStripMenuItem componentesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkedListboxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comboxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem datetimePickerToolStripMenuItem;
+        private System.Windows.Forms.LinkLabel linkLabel_gitHub;
+        private System.Windows.Forms.LinkLabel linkLabel_calc;
+        private System.Windows.Forms.ToolStripMenuItem listBoxToolStripMenuItem;
     }
 }
 
