@@ -97,5 +97,32 @@ namespace TectBoxComponents
             FormListBox newform = new FormListBox();
             newform.ShowDialog();
         }
+
+        private void MenuNotificacoes_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem.Name.ToString() == "toolStripMenuItem_close")
+            {
+                this.Close();
+            }
+            else if (e.ClickedItem.Name.ToString() == "tsmi_restaure")
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else if (e.ClickedItem.Name.ToString() == "toolStripMenuItem_message")
+            {
+                MessageBox.Show("Hello world");
+            }
+        }
+
+        private void MenuSQLite_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sQLiteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form_SQLite form_SQLite = new Form_SQLite();
+            form_SQLite.ShowDialog();
+        }
     }
 }   

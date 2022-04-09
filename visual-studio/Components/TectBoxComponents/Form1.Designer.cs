@@ -29,6 +29,8 @@ namespace TectBoxComponents
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_main));
             this.btn_add = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_vehicle = new System.Windows.Forms.TextBox();
@@ -42,10 +44,19 @@ namespace TectBoxComponents
             this.checkedListboxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datetimePickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkLabel_gitHub = new System.Windows.Forms.LinkLabel();
             this.linkLabel_calc = new System.Windows.Forms.LinkLabel();
-            this.listBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.MenuNotificacoes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmi_restaure = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_message = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_close = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuSQLite = new System.Windows.Forms.ToolStripMenuItem();
+            this.sQLiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sQLiteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.MenuNotificacoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_add
@@ -123,7 +134,8 @@ namespace TectBoxComponents
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.componentesToolStripMenuItem});
+            this.componentesToolStripMenuItem,
+            this.sQLiteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(295, 24);
@@ -137,7 +149,8 @@ namespace TectBoxComponents
             this.checkedListboxToolStripMenuItem,
             this.comboxToolStripMenuItem,
             this.datetimePickerToolStripMenuItem,
-            this.listBoxToolStripMenuItem});
+            this.listBoxToolStripMenuItem,
+            this.MenuSQLite});
             this.componentesToolStripMenuItem.Name = "componentesToolStripMenuItem";
             this.componentesToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.componentesToolStripMenuItem.Text = "Componentes";
@@ -170,6 +183,13 @@ namespace TectBoxComponents
             this.datetimePickerToolStripMenuItem.Text = "Datetime picker";
             this.datetimePickerToolStripMenuItem.Click += new System.EventHandler(this.datetimePickerToolStripMenuItem_Click);
             // 
+            // listBoxToolStripMenuItem
+            // 
+            this.listBoxToolStripMenuItem.Name = "listBoxToolStripMenuItem";
+            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listBoxToolStripMenuItem.Text = "List box";
+            this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.listBoxToolStripMenuItem_Click);
+            // 
             // linkLabel_gitHub
             // 
             this.linkLabel_gitHub.AutoSize = true;
@@ -192,12 +212,62 @@ namespace TectBoxComponents
             this.linkLabel_calc.Text = "Calculadora";
             this.linkLabel_calc.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_calc_LinkClicked);
             // 
-            // listBoxToolStripMenuItem
+            // notifyIcon1
             // 
-            this.listBoxToolStripMenuItem.Name = "listBoxToolStripMenuItem";
-            this.listBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listBoxToolStripMenuItem.Text = "List box";
-            this.listBoxToolStripMenuItem.Click += new System.EventHandler(this.listBoxToolStripMenuItem_Click);
+            this.notifyIcon1.ContextMenuStrip = this.MenuNotificacoes;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Álamo carros";
+            this.notifyIcon1.Visible = true;
+            // 
+            // MenuNotificacoes
+            // 
+            this.MenuNotificacoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmi_restaure,
+            this.toolStripMenuItem_message,
+            this.toolStripMenuItem_close});
+            this.MenuNotificacoes.Name = "Menu";
+            this.MenuNotificacoes.Size = new System.Drawing.Size(132, 70);
+            this.MenuNotificacoes.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuNotificacoes_ItemClicked);
+            // 
+            // tsmi_restaure
+            // 
+            this.tsmi_restaure.Name = "tsmi_restaure";
+            this.tsmi_restaure.Size = new System.Drawing.Size(131, 22);
+            this.tsmi_restaure.Text = "Restaurar";
+            // 
+            // toolStripMenuItem_message
+            // 
+            this.toolStripMenuItem_message.Name = "toolStripMenuItem_message";
+            this.toolStripMenuItem_message.Size = new System.Drawing.Size(131, 22);
+            this.toolStripMenuItem_message.Text = "Messagem";
+            // 
+            // toolStripMenuItem_close
+            // 
+            this.toolStripMenuItem_close.Name = "toolStripMenuItem_close";
+            this.toolStripMenuItem_close.Size = new System.Drawing.Size(131, 22);
+            this.toolStripMenuItem_close.Text = "fechar";
+            // 
+            // MenuSQLite
+            // 
+            this.MenuSQLite.Name = "MenuSQLite";
+            this.MenuSQLite.Size = new System.Drawing.Size(180, 22);
+            this.MenuSQLite.Text = "SQLite";
+            this.MenuSQLite.Click += new System.EventHandler(this.MenuSQLite_Click);
+            // 
+            // sQLiteToolStripMenuItem
+            // 
+            this.sQLiteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sQLiteToolStripMenuItem1});
+            this.sQLiteToolStripMenuItem.Name = "sQLiteToolStripMenuItem";
+            this.sQLiteToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.sQLiteToolStripMenuItem.Text = "SQLite";
+            // 
+            // sQLiteToolStripMenuItem1
+            // 
+            this.sQLiteToolStripMenuItem1.Name = "sQLiteToolStripMenuItem1";
+            this.sQLiteToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.sQLiteToolStripMenuItem1.Text = "SQLite";
+            this.sQLiteToolStripMenuItem1.Click += new System.EventHandler(this.sQLiteToolStripMenuItem1_Click);
             // 
             // Form_main
             // 
@@ -221,6 +291,7 @@ namespace TectBoxComponents
             this.Text = "Components";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.MenuNotificacoes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,6 +315,14 @@ namespace TectBoxComponents
         private System.Windows.Forms.LinkLabel linkLabel_gitHub;
         private System.Windows.Forms.LinkLabel linkLabel_calc;
         private System.Windows.Forms.ToolStripMenuItem listBoxToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ContextMenuStrip MenuNotificacoes;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_restaure;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_message;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_close;
+        private System.Windows.Forms.ToolStripMenuItem MenuSQLite;
+        private System.Windows.Forms.ToolStripMenuItem sQLiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sQLiteToolStripMenuItem1;
     }
 }
 

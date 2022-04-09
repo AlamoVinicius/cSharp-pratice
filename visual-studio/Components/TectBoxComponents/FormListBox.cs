@@ -26,13 +26,13 @@ namespace TectBoxComponents
         {
             vehicles.Add(textBox1.Text);
             textBox1.Clear();
-            Update_vehicleList();       // dados podem vim de um data base 
+            Update_vehicleList(listBox_vehicles, vehicles);       // dados podem vim de um data base 
         }
 
         private void Bnt_remove_Click(object sender, EventArgs e)
         {
             vehicles.RemoveAt(listBox_vehicles.SelectedIndex);
-            Update_vehicleList();  
+            Update_vehicleList(listBox_vehicles, vehicles);  
         }
 
         private void Btn_get_Click(object sender, EventArgs e)
@@ -40,10 +40,10 @@ namespace TectBoxComponents
             textBox1.Text = vehicles[listBox_vehicles.SelectedIndex];
         }
 
-        private void Update_vehicleList()
+        private void Update_vehicleList(ListBox list, List<string> strList)
         {
-            listBox_vehicles.DataSource = null;     // método para exluir determinado item 
-            listBox_vehicles.DataSource = vehicles;
+            list.DataSource = null;     // método para exluir determinado item 
+            list.DataSource = strList;
         }
     }
 }
