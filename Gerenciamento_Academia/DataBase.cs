@@ -72,7 +72,24 @@ namespace Gerenciamento_Academia
                 MessageBox.Show("Username já existe!");
                 return;
             }
-           
+            try
+            {
+                var cmd = DataConnection().CreateCommand();
+                cmd.CommandText = "INSERT INTO TB_USERS (name, user_name, password_user, status_user, int_nivelUser) VALUES (@nome, @username, @senha, @status, @nivel)";  //sintaxe parâmetros sql
+                cmd.Parameters.AddWithValue("@nome", colab.NAME_USER);
+                cmd.Parameters.AddWithValue("@username", colab.USERNAME);
+                cmd.Parameters.AddWithValue("@senha", colab.PASSWORD);
+                cmd.Parameters.AddWithValue("@status", colab.STATUS);
+                cmd.Parameters.AddWithValue("@nivel", colab.NIVEL);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Novó colaborador adicionado com sucesso!");
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+
+                throw err;
+            }
         }
 
         public static bool AlreadyExistUsername(Collaborator colab)

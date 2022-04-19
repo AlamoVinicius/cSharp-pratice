@@ -20,11 +20,27 @@ namespace Gerenciamento_Academia
         private void button_save_Click(object sender, EventArgs e)
         {
             Collaborator collaborator = new Collaborator(TextBox_name.Text, TextBox_userName.Text, TextBox_password.Text, comboBox_status.Text, Convert.ToInt32(NumericUpDown_nivel.Value));
+            DataBase.NewCollaborator(collaborator);
         }
 
-        private void Button_name_Click(object sender, EventArgs e)
+        private void Button_cadastrar_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void button_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button_cancel_Click(object sender, EventArgs e)
+        {
+            TextBox_name.Clear();
+            TextBox_password.Clear();
+            TextBox_userName.Clear();
+            comboBox_status.Text = "";
+            NumericUpDown_nivel.Value = 0;
+            TextBox_name.Focus();
         }
     }
 }

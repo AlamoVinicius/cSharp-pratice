@@ -46,7 +46,7 @@ namespace Gerenciamento_Academia
             this.button_close = new System.Windows.Forms.Button();
             this.button_cancel = new System.Windows.Forms.Button();
             this.button_save = new System.Windows.Forms.Button();
-            this.Button_name = new System.Windows.Forms.Button();
+            this.Button_cadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown_nivel)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -174,7 +174,7 @@ namespace Gerenciamento_Academia
             this.panel1.Controls.Add(this.button_close);
             this.panel1.Controls.Add(this.button_cancel);
             this.panel1.Controls.Add(this.button_save);
-            this.panel1.Controls.Add(this.Button_name);
+            this.panel1.Controls.Add(this.Button_cadastrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 193);
             this.panel1.Name = "panel1";
@@ -190,6 +190,7 @@ namespace Gerenciamento_Academia
             this.button_close.TabIndex = 3;
             this.button_close.Text = "Fechar";
             this.button_close.UseVisualStyleBackColor = true;
+            this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
             // button_cancel
             // 
@@ -200,6 +201,7 @@ namespace Gerenciamento_Academia
             this.button_cancel.TabIndex = 2;
             this.button_cancel.Text = "Cancelar";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // button_save
             // 
@@ -212,16 +214,16 @@ namespace Gerenciamento_Academia
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
-            // Button_name
+            // Button_cadastrar
             // 
-            this.Button_name.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_name.Location = new System.Drawing.Point(4, 4);
-            this.Button_name.Name = "Button_name";
-            this.Button_name.Size = new System.Drawing.Size(75, 23);
-            this.Button_name.TabIndex = 0;
-            this.Button_name.Text = "Cadastrar";
-            this.Button_name.UseVisualStyleBackColor = true;
-            this.Button_name.Click += new System.EventHandler(this.Button_name_Click);
+            this.Button_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_cadastrar.Location = new System.Drawing.Point(4, 4);
+            this.Button_cadastrar.Name = "Button_cadastrar";
+            this.Button_cadastrar.Size = new System.Drawing.Size(75, 23);
+            this.Button_cadastrar.TabIndex = 0;
+            this.Button_cadastrar.Text = "Cadastrar";
+            this.Button_cadastrar.UseVisualStyleBackColor = true;
+            this.Button_cadastrar.Click += new System.EventHandler(this.Button_cadastrar_Click);
             // 
             // Form_newUser
             // 
@@ -272,6 +274,6 @@ namespace Gerenciamento_Academia
         private System.Windows.Forms.Button button_close;
         private System.Windows.Forms.Button button_cancel;
         private System.Windows.Forms.Button button_save;
-        private System.Windows.Forms.Button Button_name;
+        private System.Windows.Forms.Button Button_cadastrar;
     }
 }
